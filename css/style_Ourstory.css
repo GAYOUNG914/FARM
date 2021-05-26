@@ -1,0 +1,437 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* html,
+body {
+  height: 100%;
+} */
+html {
+  background-image: url(../img/index_ourstory/farm2-sectionbg4.png);
+  background-repeat: repeat;
+  background-position: center top;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*header 영역*/
+
+header {
+  background-color: #274135;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+}
+
+header .header_wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb > li {
+  margin-left: 10px;
+  padding: 0 30px;
+}
+header .gnb > li a {
+  color: #f9d3db;
+} /*activ일 때 #fff 되어야함*/
+
+header .gnb > li a:hover {
+  color: #fff;
+}
+
+/*mainbanner 영역*/
+
+#mainbanner_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainbanner {
+  width: 100%;
+  height: 100%;
+}
+
+#mainbanner img {
+  width: 100%;
+}
+
+.mainbanner_bg {
+  width: 100%;
+  background-color: #243f32;
+  padding-bottom: 240px;
+  margin-top: -10px;
+}
+
+.mainbanner_bg .text_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: -150px;
+  /* padding-bottom: 240px; */
+  text-align: center;
+  align-items: center;
+}
+
+.mainbanner_bg .text_box .maintext {
+  font-family: "Merriweather", serif;
+  color: #ebd1c8;
+  font-size: 47px;
+  line-height: 55px;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-bottom: 15px;
+}
+
+.mainbanner_bg .text_box .subtext {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.mainbanner_bg .text_box .green_line {
+  width: 25%;
+  border: 3px solid #5e9b50;
+}
+
+.mainbanner_bg .text_box p {
+  color: #f2f1f0;
+  font-family: "Poppins", sans-serif;
+  padding: 0 5%;
+  margin: 0 0 15px;
+}
+
+.mainbanner_bg .text_box .line:nth-of-type(1) {
+  text-align: right;
+}
+
+.mainbanner_bg .text_box .line:nth-of-type(2) {
+  text-align: left;
+}
+
+/* common button style */
+button {
+  width: 242px;
+  height: 55px;
+  background-color: #5e9b50;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #74a563;
+}
+
+/*FIRST SECTION START*/
+#first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0;
+  margin-top: -200px;
+}
+
+/* swiper 추가 영역*/
+#first .swiper-container {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+#first .swiper-wrapper {
+  height: 521.328px;
+} /*수정..해야합니다..*/
+
+#first .swiper-container .inner {
+  position: relative;
+  /* height: 100vh; */
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+}
+
+#first .inner.first {
+  background-image: url("../img/swiper/swiper1.jpg");
+}
+
+#first .inner.second {
+  background-image: url("../img/swiper/swiper2.jpg");
+}
+
+#first .inner.third {
+  background-image: url("../img/swiper/swiper3.jpg");
+}
+
+#first .inner.fourth {
+  background-image: url("../img/swiper/swiper4.jpg");
+}
+
+/*SECOND SECTION START*/
+section#second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#second .square {
+  width: 100%;
+  background: url(../img/index_ourstory/farm2-bg.png) repeat;
+  background-position: left top;
+  padding: 90px 5% 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#second .square .top {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #252525;
+  padding: 0 0 40px 0;
+}
+
+#second .square .bottom {
+  display: flex;
+  padding: 0 0 50px 0;
+}
+
+#second .square .bottom .section2_number {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+#second .section2_number > li:nth-child(1) {
+  font-family: "Volkhov", serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  margin-bottom: 15px;
+}
+
+#second .section2_number > li:nth-child(2) {
+  font-family: "Poppins", sans-serif;
+}
+
+#second .square .bottom p {
+  flex: 40%;
+  font-family: "Poppins", sans-serif;
+  line-height: 33px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+#second .square:nth-child(2) .bottom p {
+  flex: 50%;
+}
+
+#second .square .bottom p span {
+  display: inline-block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  border-radius: 5px;
+  background-color: #5e9b50;
+  color: #fff;
+  text-align: center;
+  margin-right: 10px;
+}
+
+#second .swiper-img {
+  width: 100%;
+}
+
+#second .swiper-img img {
+  width: 100%;
+}
+
+/*THIRD SECITON START*/
+
+#third {
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+#third .section4_wrap {
+  display: flex;
+  height: 522px;
+}
+
+#third .section4_left {
+  width: 60%;
+  padding: 90px 5% 75px;
+  background-color: #3e5945;
+  position: relative;
+}
+
+#third .section4_wrap .section4_maintext {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ebd1c8;
+  line-height: 45px;
+  margin: 0 0 25px;
+}
+
+#third .section4_wrap .section4_subtext {
+  font-family: "Poppins", sans-serif;
+  color: #f2f1f0;
+  margin: 0 0 25px;
+  line-height: 30px;
+}
+
+#third .section4_right {
+  width: 40%;
+  background: url(../img/section4_farmer.jpg) center center;
+  background-size: cover;
+}
+
+#third .section4_left button {
+  position: absolute;
+  left: 50px;
+}
+
+.background {
+  width: 100%;
+  height: 81px;
+  background: url(../img/footer-pic1.png) center center no-repeat;
+  margin-top: 150px;
+}
+
+/*FOOTER 영역*/
+/*footer 공통 css*/
+
+footer {
+  background-image: url("../img/farm2-footerbg.png");
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+footer .footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 0;
+}
+
+footer .footer .numbers {
+  margin: 0 35px;
+  padding-top: 30px;
+  width: calc(100% / 3);
+}
+
+/* footer .footer .numbers{
+  width: calc(100% / 3);
+} */
+
+footer .footer_head {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #5e9b50;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #5e9b50;
+}
+
+footer .footer p {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+}
+
+/*footer 개별 css*/
+
+footer {
+  margin-top: 150px;
+}
+
+footer .footer_text {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*동위선택어케함 바로 위에 두개*/
+
+footer .footer > li:first-child li:nth-child(4) > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+footer .footer .footer_second ul {
+  position: relative;
+  left: 30px;
+}
+
+/* footer .footer .footer_second ul > li:after{
+  content: "";
+  width: 70px;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(0,0,0,.08);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+} */
+
+footer .copyright {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}

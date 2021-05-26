@@ -1,0 +1,476 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* html,
+body {
+  height: 100%;
+} */
+html {
+  background-image: url(../img/bg.png);
+  background-repeat: repeat;
+  background-position: center top;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*header 영역*/
+
+header {
+  background-color: #274135;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+}
+
+header .header_wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb > li {
+  margin-left: 10px;
+  padding: 0 30px;
+}
+header .gnb > li a {
+  color: #f9d3db;
+} /*activ일 때 #fff 되어야함*/
+
+header .gnb > li a:hover {
+  color: #fff;
+}
+
+.empty_header {
+  max-width: 1625px;
+  height: 80px;
+  background-color: #3e5945;
+}
+
+/*mainbanner 영역*/
+#mainbanner {
+  width: 100%;
+  background: url(../img/index_Aboutus/farm2-sectionbg3.png);
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+#mainbanner .section4_wrap {
+  display: flex;
+  align-items: center;
+  padding: 130px 5%;
+}
+
+#mainbanner .section4_left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 90px 5% 75px 0;
+  position: relative;
+}
+
+#mainbanner .section4_wrap .section4_maintext {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 47px;
+  color: #ebd1c8;
+  line-height: 55px;
+  margin: 0 1% 40px 0;
+}
+
+#mainbanner .section4_wrap .section4_maintext span {
+  color: #ae8f84;
+}
+
+#mainbanner .section4_right {
+  width: 50%;
+}
+
+#mainbanner .section4_right img {
+  width: 100%;
+}
+
+/* #mainbanner .section4_left button {
+  position: absolute;
+  left: 50px;
+  margin-left: 25px;
+} */
+
+#mainbanner .mainbanner_bottom {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #fff;
+  padding-bottom: 300px;
+  text-align: center;
+}
+
+/*FIRST SECTION START*/
+#first {
+  position: relative;
+  margin-top: -249px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#first .items {
+  display: flex;
+  justify-content: space-around;
+  /* display: inline-block; */
+  width: 1100px;
+  margin: 0 auto;
+  /* padding: 0 44px; */
+}
+
+#first .items > li {
+  width: calc(100% / 3);
+  height: 497px;
+  padding: 60px 40px 45px;
+  margin: 0 1% 40px;
+}
+
+#first .items > li:nth-child(1) {
+  background-color: #243f32;
+}
+
+#first .items > li:nth-child(2) {
+  background-color: #2b4133;
+}
+
+#first .items > li:nth-child(3) {
+  background-color: #4a6852;
+}
+
+#first .items > li > h4 {
+  font-family: "Newsreader", serif;
+  color: #f9d3db;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#first .items > li > img {
+  width: 192px;
+  height: 192px;
+}
+
+#first .items > li > .subtext {
+  margin-top: 20px;
+  color: #8a9992;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+button {
+  width: 242px;
+  height: 55px;
+  background-color: #5e9b50;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #74a563;
+}
+
+button[class="first_section"] {
+  margin-top: 50px;
+}
+
+section .section1_readmore button:after {
+  content: ">";
+  margin: 0 0 0 30px;
+}
+
+@media screen and (max-width: 770px) {
+  section .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  section .items > li {
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  section .text {
+    margin-top: 50px;
+  }
+}
+
+/*SECOND SECTION START*/
+
+section#second {
+  /* text-align: center; */
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+#second .section3_maintext {
+  text-align: center;
+}
+
+#second .section3_maintext h3 {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #252525;
+  display: inline-block;
+}
+
+/*container_wrap 공통 영역*/
+section .container_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+section .container_wrap > li {
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% / 3);
+  padding: 20px;
+}
+
+#second .container_wrap > li img {
+  width: 70px;
+  height: 70px;
+}
+
+#second .container_wrap > li .container_text {
+  padding-left: 40px;
+}
+
+#second .container_wrap > li .container_text .container_maintext {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 0 15px;
+}
+
+#second .container_wrap > li .container_text .container_subtext {
+  font-family: "Poppins", sans-serif;
+}
+
+/*THIRD SECITON START*/
+section#third {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+#third .container1 {
+  flex: 50%;
+}
+
+#third p {
+  margin: 0 0 15px;
+}
+
+#third .container2 {
+  flex: 50%;
+  flex-direction: column;
+}
+
+#third .container2 ul {
+  margin: 10px 0;
+}
+
+#third .container2 ul li {
+  padding: 10px 0;
+  display: flex;
+}
+
+#third .container2 ul li:before {
+  content: "•";
+  color: #5e9b50;
+  padding: 0 20px;
+}
+
+/* #third .container2 ul li:after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.08);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+} */
+
+#third .container_wrap > li {
+  justify-content: flex-start;
+}
+
+.double_lines {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+#number_count > ul {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#number_count > ul > li {
+  text-align: center;
+}
+
+#number_count > ul > li div {
+  font-size: 60px;
+  line-height: 60px;
+  color: #444;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+#number_count > ul > li h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: #5e9b50;
+}
+
+#number_count > ul > li p {
+  font-family: "Poppins", sans-serif;
+  color: #1f1814;
+  line-height: 30px;
+}
+
+/*FOOTER 영역*/
+/*footer 공통 css*/
+
+footer {
+  background-image: url("../img/farm2-footerbg.png");
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+footer .footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 0;
+}
+
+footer .footer .numbers {
+  margin: 0 35px;
+  padding-top: 30px;
+  width: calc(100% / 3);
+}
+
+/* footer .footer .numbers{
+  width: calc(100% / 3);
+} */
+
+footer .footer_head {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #5e9b50;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #5e9b50;
+}
+
+footer .footer p {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+}
+
+/*footer 개별 css*/
+
+footer {
+  margin-top: 150px;
+}
+
+footer .footer_text {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*동위선택어케함 바로 위에 두개*/
+
+footer .footer > li:first-child li:nth-child(4) > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+footer .footer .footer_second ul {
+  position: relative;
+  left: 30px;
+}
+
+/* footer .footer .footer_second ul > li:after{
+  content: "";
+  width: 70px;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(0,0,0,.08);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+} */
+
+footer .copyright {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}

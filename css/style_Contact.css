@@ -1,0 +1,298 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+/* html,
+body {
+  height: 100%;
+} */
+html {
+  background-image: url(../img/index_ourstory/farm2-sectionbg4.png);
+  background-repeat: repeat;
+  background-position: center top;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*header 영역*/
+
+header {
+  background-color: #274135;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+}
+
+header .header_wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb > li {
+  margin-left: 10px;
+  padding: 0 30px;
+}
+header .gnb > li a {
+  color: #f9d3db;
+} /*activ일 때 #fff 되어야함*/
+
+header .gnb > li a:hover {
+  color: #fff;
+}
+
+/*mainbanner 영역*/
+
+#mainbanner_wrap {
+  width: 100%;
+  position: relative;
+  z-index: -5;
+}
+
+/*section first 영역*/
+#first {
+  text-align: center;
+}
+
+.wrap {
+  background: url(../img/index_contact/farm2-sectionbg3.png);
+  background-repeat: repeat;
+  background-position: center top;
+  padding: 90px 5% 60px;
+  margin-top: -300px;
+  display: flex;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#first .main_text {
+  padding: 0 0 40px 0;
+}
+
+#first .main_text h3 {
+  color: #ebd1c8;
+  font-size: 47px;
+  line-height: 55px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-family: "Merriweather", serif;
+}
+
+.time .column .row:first-child {
+  display: inline-block;
+  color: #ebd1c8;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid #5e9b50;
+  padding: 5px 0;
+}
+
+.time .column .row:nth-child(2) {
+  font-size: 32px;
+  line-height: 32px;
+  padding: 10px 0;
+  font-family: "Poppins", sans-serif;
+  color: #5e9b50;
+}
+
+#first .time .column {
+  padding: 0 40px;
+}
+
+#first .time {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+} /*밑에거랑 동위선택 왜 안되지*/
+
+#first .contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+#first .contact .column {
+  flex: calc(100% / 3);
+}
+
+#first .contact .column img {
+  width: 100%;
+}
+/*
+#first .contact .column:nth-child(1) .row:nth-child(1) img{
+  width: 100%;
+}
+
+#first .contact .column:nth-child(1) .row:nth-child(1) img{
+  width: 100%;
+}*/
+
+#first .contact .column .row:nth-child(2) {
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #ebd1c8;
+  font-family: "Merriweather", serif;
+  padding: 10px 0;
+}
+
+#first .contact .column .row:nth-child(3) {
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #c9d1cc;
+  font-family: "Poppins", sans-serif;
+}
+
+/*column common style*/
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* common button style */
+button {
+  width: 242px;
+  height: 55px;
+  background-color: #5e9b50;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #74a563;
+}
+
+/*FIRST SECTION START*/
+
+.background {
+  width: 100%;
+  height: 81px;
+  background: url(../img/footer-pic1.png) center center no-repeat;
+  margin-top: 150px;
+}
+
+/*FOOTER 영역*/
+/*footer 공통 css*/
+
+footer {
+  background-image: url("../img/farm2-footerbg.png");
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+footer .footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 0;
+}
+
+footer .footer .numbers {
+  margin: 0 35px;
+  padding-top: 30px;
+  width: calc(100% / 3);
+}
+
+/* footer .footer .numbers{
+  width: calc(100% / 3);
+} */
+
+footer .footer_head {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #5e9b50;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #5e9b50;
+}
+
+footer .footer p {
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 30px;
+}
+
+/*footer 개별 css*/
+
+footer {
+  margin-top: 150px;
+}
+
+footer .footer_text {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*동위선택어케함 바로 위에 두개*/
+
+footer .footer > li:first-child li:nth-child(4) > ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+footer .footer .footer_second ul {
+  position: relative;
+  left: 30px;
+}
+
+/* footer .footer .footer_second ul > li:after{
+  content: "";
+  width: 70px;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(0,0,0,.08);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+} */
+
+footer .copyright {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}

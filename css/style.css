@@ -1,0 +1,630 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  outline: none;
+}
+html,body{ height: 100%; }
+html{
+  background-image: url(../img/bg.png);
+  background-repeat: repeat;
+  background-position: center top;
+}
+ul,ol{ list-style: none; }
+a{text-decoration: none; color: #000;}
+
+/*header 영역*/
+
+header{
+  background-color: #274135;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+}
+
+header .header_wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .gnb > li{
+  margin-left: 10px;
+  padding: 0 30px;
+}
+header .gnb > li a{
+  color: #f9d3db;
+} /*activ일 때 #fff 되어야함*/
+
+header .gnb > li a:hover{
+  color: #fff;
+}
+
+/* mobile button area */
+/* 삼선메뉴 line style */
+input[type=checkbox]#gnbcheck{ display: none; }
+
+#gnbbtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 900;
+  display: none;
+}
+
+#gnbbtn > span{
+  position: absolute;
+  width: 32px;
+  height: 1.6px;
+  background: #ffffff;
+  top: 16px;
+  transform: translateY(-50%);
+  /* transition: .5s; */
+}
+
+#gnbbtn > span:nth-child(1){
+  top: 8px;
+}
+
+#gnbbtn > span:nth-child(3){
+  top: 24px;
+}
+
+/* mobile close button */
+#mobile_close_btn{
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+#mobile_close_btn:before,#mobile_close_btn:after{
+  content: '';
+  position: absolute;
+  height: 1.6px;
+  width: 32px;
+  background: #ffffff;
+  top: 16px;
+  transform: translate(-50%) rotate(40deg);
+}
+
+#mobile_close_btn:before{
+  transform: translate(-50%) rotate(-40deg);
+}
+
+
+@media screen and ( max-width: 770px ){
+    /*header*/
+    /*mobile gnb*/
+
+    header .header_wrap{
+      display: block;
+    }
+
+    #gnbbtn{
+      display: block;
+    }
+
+    input[type=checkbox]#gnbcheck:checked ~ #header #gnb{
+      left: 0;
+    }
+
+    #mobile_close_btn{
+      display: block;
+    }
+
+    header .gnb{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      /* left: -100%; */
+      width: 80%;
+      background: rgba(0,0,0,.8);
+      transition: 0.5s ease-in-out;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+
+    header .gnb li{
+      width: 100%;
+      box-sizing: border-box;
+      padding: 20px 0 20px 40px;
+    }
+
+    header{
+      position: absolute;
+    }
+
+
+}
+
+/*mainbanner 영역*/
+
+#mainbanner{
+  background-image: url("../img/mainbanner.jpg");
+  height: 100%;
+  width: 100%;
+}
+
+#mainbanner .text_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 760px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+
+#mainbanner .text_box .maintext{
+  font-family: 'Newsreader', serif;
+  font-size: 52px;
+  color: #274135;
+  line-height: normal;
+  /* margin */
+}
+
+#mainbanner .text_box .line{
+  width: 202px;
+  height: 6px;
+  background-color: #5e9b50;
+  margin: 0 auto;
+}
+
+#mainbanner .text_box .subtext{
+  color: #fff;
+  font-family: 'Kalam', cursive;
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+/*FIRST SECTION START*/
+section:nth-of-type(1){
+  position: relative;
+  margin-top: -249px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section .items{
+  overflow: hidden;
+  display: inline-block;
+  width: 1100px;
+  /* padding: 0 44px; */
+}
+
+section .items > li {
+  float: left;
+  width: 253px;
+  height: 497px;
+  padding: 60px 30px 30px;
+  margin: 0 11px;
+}
+
+section .items > li:nth-child(1){
+  background-color: #243f32;
+}
+
+section .items > li:nth-child(2){
+  background-color: #2c4939;
+}
+
+section .items > li:nth-child(3){
+  background-color: #365341;
+}
+
+section .items > li:nth-child(4){
+  background-color: #3e5945;
+}
+
+section .items > li > h4 {
+  font-family: 'Newsreader', serif;
+  color: #f9d3db;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section .items > li > img{
+  width: 192px;
+  height: 192px;
+}
+
+section .items > li > .subtext{
+  margin-top: 20px;
+  color: #8a9992;
+  font-family: 'Poppins', sans-serif;
+  line-height: normal;
+
+}
+
+section .section1_readmore{
+  overflow: hidden;
+  display: inline-block;
+  width: 1100px;
+  height: 150px;
+}
+
+section .section1_readmore .section1_readmore_wrap{
+  display: flex;
+  justify-content: space-around;
+}
+
+section .section1_readmore .section1_text{
+  float: left;
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 60px;
+}
+
+button{
+  width: 242px;
+  height: 55px;
+  background-color: #5e9b50;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #74a563;
+}
+
+button[class="first_section"]{
+  margin-top: 50px;
+}
+
+section .section1_readmore button:after{
+  content: '>';
+  margin: 0 0 0 30px;
+}
+
+@media screen and ( max-width: 770px ){
+  section .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+  section .items > li {
+    width: 80vw;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  section .text{
+    margin-top: 50px;
+  }
+}
+
+/*SECOND SECTION START*/
+section:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .section2_textwrap{
+  width: 1100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section .section2_textwrap .section2_number{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+section .section2_number > li:nth-child(1){
+  font-family: 'Volkhov', serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  margin-bottom: 15px;
+}
+
+section .section2_number > li:nth-child(2){
+  font-family: 'Poppins', sans-serif;
+}
+
+section .square{
+  width: 825px;
+  height: 405px;
+  background: url(../img/farm2-columnbg1.png) repeat;
+  background-position: left top;
+  padding: 90px 8% 75px;
+}
+
+section .square div{
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #252525;
+}
+
+/* swiper 추가 영역*/
+section .swiper-container{
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+section .swiper-wrapper{
+  height: 521.328px;
+} /*수정..해야합니다..*/
+
+section .swiper-container .inner{
+  position: relative;
+  /* height: 100vh; */
+  margin: 0 auto;
+  background-position: center;
+  background-size: cover;
+}
+
+section .inner.first{
+  background-image: url('../img/swiper/swiper1.jpg');
+}
+
+section .inner.second{
+  background-image: url('../img/swiper/swiper2.jpg');
+}
+
+section .inner.third{
+  background-image: url('../img/swiper/swiper3.jpg');
+}
+
+section .inner.fourth{
+  background-image: url('../img/swiper/swiper4.jpg');
+}
+
+
+section .section2_textwrap:nth-child(3) .square p{
+  font-family: 'Poppins', sans-serif;
+  line-height: 33px;
+}
+
+
+section .section2_textwrap:nth-child(3) .section2_number{
+  opacity: 0.0;
+} /*section2_textwrap의 section2_number 숨기기*/
+
+/*THIRD SECTION START*/
+
+section:nth-of-type(3){
+  /* text-align: center; */
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+@media only screen and (){
+
+}
+
+section .section3_maintext{
+  text-align: center;
+}
+
+section .section3_maintext h3{
+  font-family: 'Merriweather', serif;
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #252525;
+  display: inline-block;
+}
+
+section .container_wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+section .container_wrap > li{
+  display: flex;
+  justify-content: space-around;
+  width: calc(100%/3);
+  padding: 20px;
+}
+
+section .container_wrap > li img{
+  width: 70px;
+  height: 70px;
+}
+
+section .container_wrap > li .container_text{
+  padding-left: 40px;
+}
+
+section .container_wrap > li .container_text .container_maintext{
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 0 15px;
+}
+
+section .container_wrap > li .container_text .container_subtext{
+  font-family: 'Poppins', sans-serif;
+}
+
+/*FOURTH SECITON START*/
+
+section:nth-of-type(4){
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+section .section4_wrap{
+  display: flex;
+  height: 522px;
+}
+
+section .section4_left{
+  width: 60%;
+  padding: 90px 5% 75px;
+  background-color: #3e5945;
+  position: relative;
+}
+
+section .section4_wrap .section4_maintext{
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ebd1c8;
+  line-height: 45px;
+  margin: 0 0 25px;
+}
+
+section .section4_wrap .section4_subtext{
+  font-family: 'Poppins', sans-serif;
+  color: #f2f1f0;
+  margin: 0 0 25px;
+  line-height: 30px;
+}
+
+section .section4_right{
+  width: 40%;
+  background: url(../img/section4_farmer.jpg) center center;
+  background-size: cover;
+}
+
+section .section4_left button{
+  position: absolute;
+  left: 50px;
+}
+
+.background{
+  width: 100%;
+  height: 81px;
+  background: url(../img/footer-pic1.png) center center no-repeat;
+  margin-top: 150px;
+}
+
+/*FOOTER 영역*/
+/*footer 공통 css*/
+
+footer{
+  background-image: url("../img/farm2-footerbg.png");
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+footer .footer{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 70px 0;
+}
+
+footer .footer .numbers{
+  margin: 0 35px;
+  padding-top: 30px;
+  width: calc(100%/3);
+}
+
+/* footer .footer .numbers{
+  width: calc(100% / 3);
+} */
+
+footer .footer_head{
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer a{
+  color: #5e9b50;
+}
+
+footer a:hover{
+  border-bottom: 1px solid #5e9b50;
+}
+
+footer .footer p{
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 30px;
+}
+
+/*footer 개별 css*/
+
+footer{
+  margin-top: 150px;
+}
+
+footer .footer_text{
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/*동위선택어케함 바로 위에 두개*/
+
+footer .footer > li:first-child li:nth-child(4) > ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+footer .footer .footer_second ul{
+  position: relative;
+  left: 30px;
+}
+
+footer .footer .footer_second ul > li:before{
+}
+
+/* footer .footer .footer_second ul > li:after{
+  content: "";
+  width: 70px;
+  height: 1px;
+  overflow: hidden;
+  background: rgba(0,0,0,.08);
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+} */
+
+footer .copyright{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}
