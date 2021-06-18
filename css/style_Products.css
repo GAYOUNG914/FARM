@@ -1,83 +1,32 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-*{
-  box-sizing: border-box;
-  margin: 0; padding: 0;
-  outline: none;
-}
-html,body{ height: 100%; }
-html{
-  background-image: url(../img/bg.png);
-  background-repeat: repeat;
-  background-position: center top;
-}
-ul,ol{ list-style: none; }
-a{text-decoration: none; color: #000;}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /*button common style*/
-button{
+button {
   width: 242px;
   height: 55px;
   background-color: #5e9b50;
   font-size: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: #74a563;
 }
 
-/*header 영역*/
-
-header{
-  background-color: #274135;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-}
-
-header .header_wrap{
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .gnb{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .gnb > li{
-  margin-left: 10px;
-  padding: 0 30px;
-}
-header .gnb > li a{
-  color: #f9d3db;
-} /*activ일 때 #fff 되어야함*/
-
-header .gnb > li a:hover{
-  color: #fff;
-}
-
-/*@media screen and ( max-width: 1100px ) {*/
-/*원래 있던 header display none하고 새로만드는게 더 빠르겠는데..?*/
-/* } */
-
 /*mainbanner 영역*/
 
-#mainbanner{
-  background: url("../img/index_products/farm2-subheader.jpg") center center no-repeat;
+#mainbanner {
+  background: url("../img/index_products/farm2-subheader.jpg") center center
+    no-repeat;
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -85,8 +34,8 @@ header .gnb > li a:hover{
   text-align: center;
 }
 
-#mainbanner .maintext{
-  font-family: 'Newsreader', serif;
+#mainbanner .maintext {
+  font-family: "Newsreader", serif;
   font-size: 60px;
   line-height: 70px;
   font-weight: bold;
@@ -104,7 +53,7 @@ header .gnb > li a:hover{
   margin-bottom: 150px;
 }
 
-#first .container_wrap{
+#first .container_wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -115,25 +64,22 @@ header .gnb > li a:hover{
   padding: 130px 0 90px;
 }
 
-#first .container_wrap > li{
+#first .container_wrap > li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100%/3);
+  width: calc(100% / 3);
   padding: 20px 20px 40px 20px;
 }
 
-#first .container_wrap > li img{
+#first .container_wrap > li img {
   width: 134px;
   height: 134px;
   margin-bottom: 40px;
 }
 
-#first .container_wrap > li .container_text{
-}
-
-#first .container_wrap > li .container_text .container_maintext{
-  font-family: 'Merriweather', serif;
+#first .container_wrap > li .container_text .container_maintext {
+  font-family: "Merriweather", serif;
   font-size: 24px;
   line-height: 34px;
   font-weight: bold;
@@ -141,34 +87,42 @@ header .gnb > li a:hover{
   margin-bottom: 15px;
 }
 
-#first .container_wrap > li .container_text .container_subtext{
-  font-family: 'Poppins', sans-serif;
+#first .container_wrap > li .container_text .container_subtext {
+  font-family: "Poppins", sans-serif;
   color: #c9d1cc;
   line-height: 30px;
   margin-bottom: 15px;
 }
 
 /*section 2~5 공통css*/
-section:not(#first){
+section:not(#first) {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1100px;
   margin: 0 auto;
   margin-bottom: 50px;
+  opacity: 0;
+  margin-top: -100px;
+  transition: 1s;
 }
 
-section .img_box{
+section:not(#first).active {
+  opacity: 1;
+  margin-top: 0;
+}
+
+section .img_box {
   width: 40%;
 }
 
-section .description_box{
+section .description_box {
   width: 60%;
   padding: 0 5%;
 }
 
-section .description_box h2{
-  font-family: 'Merriweather', serif;
+section .description_box h2 {
+  font-family: "Merriweather", serif;
   font-size: 47px;
   line-height: 55px;
   font-weight: bold;
@@ -177,8 +131,8 @@ section .description_box h2{
   color: #252525;
 }
 
-section .description_box h5{
-  font-family: 'Merriweather', serif;
+section .description_box h5 {
+  font-family: "Merriweather", serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
@@ -187,155 +141,76 @@ section .description_box h5{
   color: #252525;
 }
 
-section .description_box p{
-  font-family: 'Poppins', sans-serif;
+section .description_box p {
+  font-family: "Poppins", sans-serif;
   line-height: 30px;
   padding: 15px;
 }
 
-section .description_box button{
+section .description_box button {
   margin: 15px;
 }
 
-.double_lines{
+.double_lines {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 100px 0;
 }
 
-#number_count > ul{
+#number_count > ul {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
 
-#number_count > ul > li{
+#number_count > ul > li {
   text-align: center;
 }
 
-#number_count > ul > li div{
+#number_count > ul > li div {
   font-size: 60px;
   line-height: 60px;
   color: #444;
   margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-#number_count > ul > li h3{
-  font-family: 'Poppins', sans-serif;
+#number_count > ul > li h3 {
+  font-family: "Poppins", sans-serif;
   margin-bottom: 15px;
   font-weight: 400;
   color: #5e9b50;
 }
 
-#number_count > ul > li p{
-  font-family: 'Poppins', sans-serif;
+#number_count > ul > li p {
+  font-family: "Poppins", sans-serif;
   color: #1f1814;
-  line-height: 30px
-}
-
-
-
-/*FOOTER 영역*/
-/*footer 공통 css*/
-
-footer{
-  background-image: url("../img/farm2-footerbg.png");
-  background-repeat: repeat;
-  background-position: center top;
-}
-
-footer .footer{
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding: 70px 0;
-}
-
-footer .footer .numbers{
-  margin: 0 35px;
-  padding-top: 30px;
-  width: calc(100%/3);
-}
-
-/* footer .footer .numbers{
-  width: calc(100% / 3);
-} */
-
-footer .footer_head{
-  font-family: 'Merriweather', serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-footer a{
-  color: #5e9b50;
-}
-
-footer a:hover{
-  border-bottom: 1px solid #5e9b50;
-}
-
-footer .footer p{
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
   line-height: 30px;
 }
 
-/*footer 개별 css*/
+@media screen and (max-width: 767px) {
+  #first .container_wrap > li {
+    flex: 100%;
+    padding: 30px 15% 30px;
+  }
 
-footer{
-  margin-top: 150px;
-}
+  section:not(#first) {
+    flex-direction: column;
+    text-align: center;
+  }
 
-footer .footer_text{
-  font-family: 'Merriweather', serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
+  section#third,
+  section#fifth {
+    flex-direction: column-reverse;
+  }
 
-/*동위선택어케함 바로 위에 두개*/
+  #number_count > ul {
+    flex-direction: column;
+  }
 
-footer .footer > li:first-child li:nth-child(4) > ul{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-footer .footer .footer_second ul{
-  /* position: relative;
-  left: 30px; */
-}
-
-footer .footer .footer_second ul > li:before{
-  /* content:'•';
-  color: #5e9b50; */
-}
-
-/* footer .footer .footer_second ul > li:after{
-  content: "";
-  width: 70px;
-  height: 1px;
-  overflow: hidden;
-  background: rgba(0,0,0,.08);
-  position: absolute;
-  left: 0;
-  bottom: -11px;
-} */
-
-footer .copyright{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 30px 0 20px;
-}
-
-@media screen and ( max-width: 770px ){
-  
+  #number_count > ul > li {
+    padding: 20px 25%;
+  }
 }
