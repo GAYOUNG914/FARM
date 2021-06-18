@@ -6,71 +6,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  outline: none;
-}
+
 /* html,
 body {
   height: 100%;
 } */
-html {
-  background-image: url(../img/bg.png);
-  background-repeat: repeat;
-  background-position: center top;
-}
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-
-/*header 영역*/
-
-header {
-  background-color: #274135;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-  z-index: 900;
-}
-
-header .header_wrap {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .gnb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .gnb > li {
-  margin-left: 10px;
-  padding: 0 30px;
-}
-header .gnb > li a {
-  color: #f9d3db;
-} /*activ일 때 #fff 되어야함*/
-
-header .gnb > li a:hover {
-  color: #fff;
-}
-
-.empty_header {
-  max-width: 1625px;
-  height: 80px;
-  background-color: #3e5945;
-}
 
 /*mainbanner 영역*/
 #mainbanner {
@@ -138,6 +78,14 @@ header .gnb > li a:hover {
   margin-top: -249px;
   text-align: center;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: 1s;
+}
+
+#first.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #first .items {
@@ -210,26 +158,6 @@ button[class="first_section"] {
 section .section1_readmore button:after {
   content: ">";
   margin: 0 0 0 30px;
-}
-
-@media screen and (max-width: 770px) {
-  section .items {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  section .items > li {
-    width: 80vw;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 50px;
-  }
-
-  section .text {
-    margin-top: 50px;
-  }
 }
 
 /*SECOND SECTION START*/
@@ -382,95 +310,102 @@ section#third {
   line-height: 30px;
 }
 
-/*FOOTER 영역*/
-/*footer 공통 css*/
+@media screen and (max-width: 1200px){
+  #mainbanner .section4_wrap .section4_maintext{
+    font-size: 40px;
+  }
 
-footer {
-  background-image: url("../img/farm2-footerbg.png");
-  background-repeat: repeat;
-  background-position: center top;
+  #first .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #first .items > li {
+    width: 20%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 25px 45px;
+  }
+
+  #first .items > li > img{
+    width: auto;
+    height: auto;
+  }
+
+  #second .container_wrap > li{
+    width: 50%;
+  }
+
+  #number_count > ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #number_count > ul > li{
+    width: 50%;
+    padding: 20px 80px;
+  }
+
 }
 
-footer .footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding: 70px 0;
-}
+@media screen and (max-width: 767px) {
+  #mainbanner .section4_wrap {
+    flex-direction: column;
+  }
 
-footer .footer .numbers {
-  margin: 0 35px;
-  padding-top: 30px;
-  width: calc(100% / 3);
-}
+  #mainbanner .section4_left {
+    width: 100%;
+    text-align: center;
+  }
+  #mainbanner .section4_right {
+    width: 80%;
+  }
 
-/* footer .footer .numbers{
-  width: calc(100% / 3);
-} */
+  #mainbanner .section4_wrap .section4_maintext {
+    font-size: 40px;
+  }
 
-footer .footer_head {
-  font-family: "Merriweather", serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
+  #first .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #first .items > li {
+    width: 80vw;
+    padding: 20px 20%;
+    margin: 0;
+    margin-bottom: 50px;
+  }
 
-footer a {
-  color: #5e9b50;
-}
+  #first .items > li > img {
+    object-fit: contain;
+  }
 
-footer a:hover {
-  border-bottom: 1px solid #5e9b50;
-}
+  #first .text {
+    margin-top: 50px;
+  }
 
-footer .footer p {
-  margin-bottom: 20px;
-  font-family: "Poppins", sans-serif;
-  line-height: 30px;
-}
+  #second .container_wrap {
+    flex-direction: column;
+  }
 
-/*footer 개별 css*/
+  #second .container_wrap > li {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 50px 50px 25px 50px;
+  }
 
-footer {
-  margin-top: 150px;
-}
+  section#third {
+    text-align: center;
+  }
 
-footer .footer_text {
-  font-family: "Merriweather", serif;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
+  #number_count > ul {
+    flex-direction: row;
+  }
 
-/*동위선택어케함 바로 위에 두개*/
-
-footer .footer > li:first-child li:nth-child(4) > ul {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-
-footer .footer .footer_second ul {
-  position: relative;
-  left: 30px;
-}
-
-/* footer .footer .footer_second ul > li:after{
-  content: "";
-  width: 70px;
-  height: 1px;
-  overflow: hidden;
-  background: rgba(0,0,0,.08);
-  position: absolute;
-  left: 0;
-  bottom: -11px;
-} */
-
-footer .copyright {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 30px 0 20px;
 }

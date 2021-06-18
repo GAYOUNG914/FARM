@@ -6,24 +6,39 @@
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <link rel="stylesheet" href="./css/swiper_customize.css">
     <link rel="stylesheet" href="./css/style_Aboutus.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <script src="https://kit.fontawesome.com/d9c2fe6a26.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/jquery_3.5.1.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header_wrap">
-        <div class="logo"><img src="./img/logo.png"></div>
-        <ul class="gnb">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index_Products.html">Products</a></li>
-          <li><a href="index_Ourstory.html">Our story</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="index_contact.html">Contact</a></li>
-          <li><a href="#">Buy now</a></li>
-        </ul>
+    <!-- to the top button -->
+    <div class="back_to_top">
+      <a href="#intro"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff" width="20px" height="20px"><path d="M0 0h24v24H0z" fill="none"/><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></a>
+    </div>
+    <!--mobile menu button-->
+    <input type="checkbox" id="gnbcheck" name="gnbcheck">
+    <label for="gnbcheck" id="gnbbtn">
+      <span></span><span></span><span></span>
+    </label>
+    <!-- header -->
+    <header id="header">
+      <div class="gnb_wrap">
+        <a href="index.html" id="logo"><img src="./img/logo.png"></a>
+        <nav id="gnb">
+          <label for="gnbcheck" id="mobile_close_btn"></label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index_Products.html">Products</a></li>
+            <li><a href="index_Ourstory.html">Our story</a></li>
+            <li><a href="index_Aboutus.html">About us</a></li>
+            <li><a href="index_contact.html">Contact</a></li>
+            <li><a href="#">Buy now</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="empty_header"></div>
+    <!-- mainbanner -->
     <div id="mainbanner">
       <div class="section4_wrap">
         <ul class="section4_left">
@@ -184,7 +199,7 @@
       </ul>
       <div class="copyright">
         © 2021 BeFarm 2 - Betheme. All Rights Reserved.
-        <a href="#">Muffin group</a>
+         <a href="#">Muffin group</a>
       </div>
     </footer>
     <script type="text/javascript" src="./js/common.js"></script>
