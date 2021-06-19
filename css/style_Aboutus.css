@@ -104,6 +104,53 @@ body {
   margin: 0 1% 40px;
 }
 
+/*active*/
+#first .items > .item1 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.1s;
+}
+#first .items > .item2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.2s;
+}
+#first .items > .item3 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.3s;
+}
+#first .items > .item4 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.4s;
+}
+
+#first.active .items > .item1 {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: 0.5s 0.25s; */
+}
+
+#first.active .items > .item2 {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: 0.5s 0.35s; */
+}
+
+#first.active .items > .item3 {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: 0.5s 0.42s; */
+}
+
+#first.active .items > .item4 {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: 0.5s 0.48s; */
+}
+/*active 끝*/
+
 #first .items > li:nth-child(1) {
   background-color: #243f32;
 }
@@ -310,8 +357,8 @@ section#third {
   line-height: 30px;
 }
 
-@media screen and (max-width: 1200px){
-  #mainbanner .section4_wrap .section4_maintext{
+@media screen and (max-width: 1200px) {
+  #mainbanner .section4_wrap .section4_maintext {
     font-size: 40px;
   }
 
@@ -330,25 +377,24 @@ section#third {
     padding: 60px 25px 45px;
   }
 
-  #first .items > li > img{
+  #first .items > li > img {
     width: auto;
     height: auto;
   }
 
-  #second .container_wrap > li{
+  #second .container_wrap > li {
     width: 50%;
   }
 
-  #number_count > ul{
+  #number_count > ul {
     display: flex;
     flex-wrap: wrap;
   }
 
-  #number_count > ul > li{
+  #number_count > ul > li {
     width: 50%;
     padding: 20px 80px;
   }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -407,5 +453,4 @@ section#third {
   #number_count > ul {
     flex-direction: row;
   }
-
 }

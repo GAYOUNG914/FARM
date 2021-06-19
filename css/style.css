@@ -93,28 +93,50 @@ section .items > li:nth-child(4) {
 }
 
 /*active*/
-section:nth-of-type(1).active .items > li:nth-child(1) {
-  transform: translateY(0);
-  opacity: 1;
-  transition: 0.5s 0.25s;
+
+section:nth-of-type(1) .items > .item1 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.1s;
+}
+section:nth-of-type(1) .items > .item2 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.2s;
+}
+section:nth-of-type(1) .items > .item3 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.3s;
+}
+section:nth-of-type(1) .items > .item4 {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: 0.5s 0.4s;
 }
 
-section:nth-of-type(1).active .items > li:nth-child(2) {
+section:nth-of-type(1).active .items > .item1 {
   transform: translateY(0);
   opacity: 1;
-  transition: 0.5s 0.35s;
+  /* transition: 0.5s 0.25s; */
 }
 
-section:nth-of-type(1).active .items > li:nth-child(3) {
+section:nth-of-type(1).active .items > .item2 {
   transform: translateY(0);
   opacity: 1;
-  transition: 0.5s 0.42s;
+  /* transition: 0.5s 0.35s; */
 }
 
-section:nth-of-type(1).active .items > li:nth-child(4) {
+section:nth-of-type(1).active .items > .item3 {
   transform: translateY(0);
   opacity: 1;
-  transition: 0.5s 0.48s;
+  /* transition: 0.5s 0.42s; */
+}
+
+section:nth-of-type(1).active .items > .item4 {
+  transform: translateY(0);
+  opacity: 1;
+  /* transition: 0.5s 0.48s; */
 }
 /*active 끝*/
 
@@ -243,7 +265,7 @@ section .swiper-container {
 
 section .swiper-wrapper {
   height: 521.328px;
-} /*수정..해야합니다..*/
+}
 
 section .swiper-container .inner {
   position: relative;
@@ -396,7 +418,7 @@ section .section4_left button {
   margin-top: 150px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   section .items {
     display: flex;
     justify-content: center;
@@ -411,12 +433,12 @@ section .section4_left button {
     flex-direction: column;
   }
 
-  section .items > li > img{
+  section .items > li > img {
     width: auto;
     height: auto;
   }
 
-  section .section1_readmore{
+  section .section1_readmore {
     width: auto;
   }
 
@@ -467,8 +489,6 @@ section .section4_left button {
     flex: 50%;
     justify-content: flex-start;
   }
-
-
 }
 
 @media screen and (max-width: 767px) {
