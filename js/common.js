@@ -61,4 +61,9 @@ $(function () {
       }
     });
   });
+
+  //a태그 비활성화
+  $('a[href="#"]').click(function (e) {
+    e.preventDefault();
+  });
 }); //document ready
